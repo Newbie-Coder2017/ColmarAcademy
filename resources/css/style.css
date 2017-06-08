@@ -1,0 +1,17 @@
+html {
+  font-family: "Roboto", sans-serif;
+}
+
+nav a {
+  color: rgb(74, 74, 74);
+  text-decoration: none;
+}
+
+
+/*Navigation*/
+
+@media only screen and (min-width: 770px) {
+  nav img {
+    display: none;
+  }
+}
