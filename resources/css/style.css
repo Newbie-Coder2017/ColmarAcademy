@@ -2,16 +2,73 @@ html {
   font-family: "Roboto", sans-serif;
 }
 
-nav a {
-  color: rgb(74, 74, 74);
-  text-decoration: none;
+
+/*HEADER*/
+
+header {
+  display: flex;
+  justify-content: space-between;
+  height: 64px;
+  position: fixed;
+  z-index: 30;
+}
+
+#logo {
+  display: flex;
+  align-items: center;
+}
+
+#logo img {
+  margin-left: 24px;
 }
 
 
 /*Navigation*/
 
+nav {
+  display: flex;
+  align-items: center;
+}
+
+nav ul {
+  display: flex;
+  align-content: center;
+}
+
+nav li {
+  margin-right: 1rem;
+}
+
+nav a {
+  color: rgb(74, 74, 74);
+  text-decoration: none;
+}
+
+@media only screen and (max-width:770px) {
+  nav h5 {
+    display: none;
+  }
+  nav li:nth-child(3n) {
+    display: none;
+  }
+}
+
 @media only screen and (min-width: 770px) {
   nav img {
     display: none;
   }
+}
+
+
+/*MAIN Section*/
+
+
+/*Information Highlights*/
+
+aside feature:hover {
+  background-color: rgb(216, 216, 216);
+}
+
+#info a {
+  color: rgb(143, 185, 233)
 }
