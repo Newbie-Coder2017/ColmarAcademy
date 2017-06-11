@@ -73,6 +73,12 @@ nav ul {
 
 nav li {
   margin-right: 1rem;
+  height: 100%;
+}
+
+nav li:hover {
+  font-weight: 700;
+  font-size: 1.2rem;
 }
 
 a {
@@ -112,7 +118,6 @@ main {
 .jumbotron {
   padding: 2rem 1.5rem;
   background-color: rgb(216, 216, 216);
-  width: 100%;
   display: flex;
   align-items: center;
 }
