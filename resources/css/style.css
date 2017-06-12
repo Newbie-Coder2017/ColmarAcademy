@@ -370,6 +370,9 @@ aside .story:hover {
   width: 25%;
   margin: 2rem;
   background-color: rgb(98, 159, 182);
+}
+
+.program a {
   color: white;
 }
 
