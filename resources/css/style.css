@@ -1,7 +1,7 @@
 html {
   font-family: 'Roboto Condensed', sans-serif;
   font-size: 16px;
-  /*background-color: rgb(107, 174, 199);*/
+  color: rgb(74, 74, 74);
 }
 
 h1, h2, h3 {
@@ -28,8 +28,13 @@ h4 {
   font-weight: 400;
 }
 
+h5 {
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+
 p {
-  font-weight: 300;
+  font-weight: 400;
   line-height: 1.25;
 }
 
@@ -40,10 +45,16 @@ header {
   display: flex;
   justify-content: space-between;
   height: 64px;
-  background-color: rgba(255, 255, 255, 0.9);
+  background-color: rgba(107, 174, 199, 0.9);
   position: fixed;
   z-index: 30;
   width: 100%;
+}
+
+#company-name {
+  color: black;
+  font-size: 1.2rem;
+  margin-left: 0.25rem;
 }
 
 #logo {
@@ -79,9 +90,8 @@ nav li {
   height: 100%;
 }
 
-nav li:hover {
-  font-weight: 700;
-  font-size: 1.2rem;
+nav a:hover {
+  color: white;
 }
 
 a {
@@ -107,6 +117,18 @@ a {
   }
 }
 
+@media only screen and (max-width: 460px) {
+  #company-name {
+    display: none;
+  }
+  nav li {
+    margin: 0 1rem;
+  }
+  nav {
+    width: 60%
+  }
+}
+
 
 /*MAIN Section*/
 
@@ -125,9 +147,13 @@ main {
   align-items: center;
 }
 
-.jumbotron img {
+.jumbotron .banner {
   width: 60%;
   overflow: hidden;
+}
+
+.jumbotron img {
+  width: 100%;
 }
 
 .jumbotron {
@@ -156,7 +182,7 @@ hgroup {
 }
 
 .button:active {
-  background-color: rgb(160, 240, 50);
+  background-color: rgb(105, 122, 159);
 }
 
 
@@ -176,9 +202,12 @@ hgroup {
   .jumbotron {
     flex-direction: column;
     align-items: flex-start;
+    padding: 2rem 1rem;
   }
-  .jumbotron img {
+  .jumbotron .banner {
     width: 100%;
+    max-height: 10.5rem;
+    overflow: hidden;
   }
   hgroup {
     flex-flow: row wrap;
@@ -196,30 +225,38 @@ hgroup {
 #highlights {
   display: flex;
   flex-flow: row;
-  padding: 2rem 0;
+  padding: 2rem;
   background-color: rgb(107, 174, 199);
   color: white;
 }
 
 .focus {
+  /*This affects the Focus class in both Highlights and Thesis sections*/
   max-width: 60%;
   display: flex;
   flex-flow: column wrap;
   padding: 0 1.5rem;
 }
 
-.focus img {
+#highlights img, #thesis img {
   width: 100%;
 }
 
 aside {
-  min-width: 423px;
   max-width: 40%;
 }
 
-aside img {
+aside .image {
   width: 35%;
-  padding: 1rem;
+}
+
+.title {
+  padding-left: 1rem;
+  max-width: 60%;
+}
+
+.title p {
+  margin: 0.5rem auto;
 }
 
 .mobile {
@@ -228,22 +265,29 @@ aside img {
 
 .story {
   display: flex;
+  flex-flow: row nowrap;
   align-items: center;
-  background-color: rgb(112, 202, 187);
+  background-color: rgb(139, 207, 222);
   color: white;
+  padding: 1rem;
 }
 
 aside .story:hover {
-  background-color: rgb(210, 255, 227);
-  color: black;
+  background-color: rgb(112, 202, 187);
+  color: rgb(74, 74, 74);
 }
 
 .info a {
-  color: rgb(117, 135, 176):
+  color: rgb(117, 135, 176);
+}
+
+.info a:hover {
+  color: white;
 }
 
 .reference {
   font-size: 0.75rem;
+  margin-top: 2.5rem;
 }
 
 
@@ -252,28 +296,32 @@ aside .story:hover {
 @media only screen and (max-width:1080px) {
   #highlights {
     flex-flow: column;
-    padding: 0;
-    margin-top: 2rem;
+    padding: 2rem 0;
   }
   .focus {
     max-width: 100%;
   }
-  aside {
-    max-width: 100%;
+  #highlights aside {
+    width: inherit;
+    max-width: none;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
-    margin: 2rem 0;
-    padding: 0 1.5rem;
+    justify-content: center;
+    margin: 2rem 1.5rem 0;
   }
-  aside img {
+  #highlights .image {
     padding: 0;
+    width: 100%;
   }
-  aside .story {
+  #highlights .story {
     display: flex;
     flex-direction: column;
-    width: 30%;
+    max-width: 30%;
     align-items: flex-start;
+  }
+  #highlights .title {
+    max-width: none;
+    margin-top: 1rem;
   }
   .desktop {
     display: none;
@@ -290,13 +338,12 @@ aside .story:hover {
   }
   #highlights aside {
     flex-flow: column;
+    width: auto;
+    margin-top: 0;
   }
-  aside .story {
-    width: 100%;
-    margin: 1rem 0;
-  }
-  aside div {
-    margin-top: 1rem;
+  #highlights .story {
+    max-width: 100%;
+    margin: 0.5rem 0;
   }
 }
 
@@ -312,7 +359,7 @@ aside .story:hover {
 }
 
 #courses h2, #thesis h2 {
-  margin: 2rem auto;
+  margin: 2rem auto 0;
   width: 100%;
   text-align: center;
 }
@@ -323,12 +370,11 @@ aside .story:hover {
   width: 25%;
   margin: 2rem;
   background-color: rgb(98, 159, 182);
-  color: rgb(210, 255, 227);
+  color: white;
 }
 
 .program:hover {
   background-color: rgb(105, 122, 159);
-  color: white;
   transition: background-color 0.5s ease-out 100ms;
 }
 
@@ -347,6 +393,7 @@ aside .story:hover {
 
 .details h4 {
   margin: 0.5rem 0;
+  font-weight: 400;
 }
 
 .details p {
@@ -376,23 +423,32 @@ aside .story:hover {
   .program img, .program h4, .program p {
     display: none;
   }
+  #courses h3 {
+    margin: 0;
+  }
 }
 
 
 /*THESIS Container*/
 
-#thesis {
-  padding: 2rem 0;
+#thesis>div {
+  display: flex;
+  padding: 0 1.5rem;
+  margin: 2rem 0;
 }
 
-#thesis div {
-  display: flex;
+#thesis .focus {
+  padding: 0;
 }
 
-.story div {
+#thesis aside {
   display: flex;
-  flex-direction: column;
-  padding: 0 1rem 1rem;
+  flex-flow: column;
+  margin-left: 1rem;
+}
+
+#thesis h3 {
+  margin: 1.5rem 0;
 }
 
 .focus video {
@@ -403,22 +459,34 @@ aside .story:hover {
 /*BREAK-POINT Thesis*/
 
 @media only screen and (max-width:1080px) {
-  #thesis div {
+  #thesis>div {
     flex-flow: column;
   }
   #thesis .story {
-    width: 50%;
     flex-flow: row;
-    padding: 1rem;
-    align-items: center;
+    padding: 0;
+    max-height: 10.5rem;
   }
-  #thesis .story div {
+  #thesis aside {
+    display: flex;
+    flex-flow: row;
+    max-width: none;
+    margin: 2rem 0 0 0;
+  }
+  #thesis .image {
     padding: 1rem;
+    max-width: 25%;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  #thesis aside {
+    display: none;
   }
 }
 
 @media only screen and (max-width: 660px) {
-  #thesis aside {
+  #thesis aside, #thesis h3, #thesis p {
     display: none;
   }
 }
@@ -428,7 +496,26 @@ aside .story:hover {
 
 footer {
   display: flex;
+  flex-flow: row;
   justify-content: space-between;
   padding: 1rem 1.5rem;
-  border-top: 1px solid rgb(25, 25, 25)
+  border-top: 1px solid rgb(25, 25, 25);
+  font-weight: 300;
+}
+
+#legal a {
+  margin: 0 2rem;
+}
+
+
+/*BREAK-POINT Footer */
+
+@media only screen and (max-width: 600px) {
+  footer {
+    flex-flow: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 3rem;
+    font-size: 0.85rem;
+  }
 }

@@ -17,13 +17,15 @@
   <header>
     <section id="logo">
       <img src="resources/images/ic-logo.svg" alt="Standing Lion Logo" />
-      <span>COLMAR</span>ACADEMY
+      <div id="company-name">
+        <span>COLMAR</span>ACADEMY
+      </div>
     </section>
     <nav>
       <!--Navigation -->
       <ul>
         <li>
-          <a href="#on-campus"><h5>On campus</h5><img src="resources/images/ic-on-campus.svg" /></a>
+          <a href="#on-campus"><h5>On Campus</h5><img src="resources/images/ic-on-campus.svg" /></a>
         </li>
         <li>
           <a href="#online"><h5>Online</h5><img src="resources/images/ic-online.svg" /></a>
@@ -43,8 +45,7 @@
 
     <!-- PROMOTION BANNER -->
     <section class="jumbotron">
-      <img src="resources/images/banner.jpg" />
-      <div></div>
+      <div class="banner"><img src="resources/images/banner.jpg" /></div>
       <hgroup>
         <h1>Learn something new everyday</h1>
         <p>
@@ -57,7 +58,9 @@
     <!-- Highlights and Information Container -->
     <section id="highlights">
       <feature class="focus">
-        <img src="resources/images/information-main.jpg" />
+        <div class="image">
+          <img src="resources/images/information-main.jpg" />
+        </div>
         <div>
           <h2>It doesn't hurt to keep practicing</h2>
           <p>
@@ -69,9 +72,11 @@
       <!-- Side Bar of additional articles -->
       <aside>
         <feature class="story info">
-          <img class="desktop" src="resources/images/information-orientation.jpg" />
-          <img class="mobile" src="resources/images/information-orientation-mobile.jpg" />
-          <div>
+          <div class="image">
+            <img class="desktop" src="resources/images/information-orientation.jpg" />
+            <img class="mobile" src="resources/images/information-orientation-mobile.jpg" />
+          </div>
+          <div class="title">
             <h3>Orientation date</h3>
             <p>
               Tue 10/11 & Wed 10/12; 8am-3pm
@@ -81,9 +86,11 @@
         </feature>
 
         <feature class="story info">
-          <img class="desktop" src="resources/images/information-campus.jpg" />
-          <img class="mobile" src="resources/images/information-campus-mobile.jpg" />
-          <div>
+          <div class="image">
+            <img class="desktop" src="resources/images/information-campus.jpg" />
+            <img class="mobile" src="resources/images/information-campus-mobile.jpg" />
+          </div>
+          <div class="title">
             <h3>Our campus</h3>
             <p>
               Find which campus is close by you
@@ -94,9 +101,11 @@
         </feature>
 
         <feature class="story info">
-          <img class="desktop" src="resources/images/information-guest-lecture.jpg" />
-          <img class="mobile" src="resources/images/information-guest-lecture-mobile.jpg" />
-          <div>
+          <div class="image">
+            <img class="desktop" src="resources/images/information-guest-lecture.jpg" />
+            <img class="mobile" src="resources/images/information-guest-lecture-mobile.jpg" />
+          </div>
+          <div class="title">
 
             <h3>Our guest lecture</h3>
             <p>
@@ -194,8 +203,10 @@
 
         <aside>
           <feature class="story">
-            <img src="resources/images/thesis-fisma.jpg" />
-            <div>
+            <div class="image">
+              <img src="resources/images/thesis-fisma.jpg" />
+            </div>
+            <div class="title">
 
               <h3>Fisma: Design and Build</h3>
               <p>
@@ -205,8 +216,10 @@
           </feature>
 
           <feature class="story">
-            <img src="resources/images/thesis-now-and-then.jpg" />
-            <div>
+            <div class="image">
+              <img src="resources/images/thesis-now-and-then.jpg" />
+            </div>
+            <div class="title">
 
               <h3>Now and Then</h3>
               <p>
