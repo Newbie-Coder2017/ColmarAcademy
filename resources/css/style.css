@@ -142,7 +142,6 @@ main {
 
 .jumbotron {
   padding: 2rem 1.5rem;
-  /*background-color: rgba(172, 172, 175, 0.7);*/
   display: flex;
   align-items: center;
 }
@@ -252,7 +251,7 @@ aside .image {
 
 .title {
   padding-left: 1rem;
-  max-width: 60%;
+  width: 60%;
 }
 
 .title p {
@@ -320,7 +319,7 @@ aside .story:hover {
     align-items: flex-start;
   }
   #highlights .title {
-    max-width: none;
+    width: 90%;
     margin-top: 1rem;
   }
   .desktop {
@@ -328,7 +327,6 @@ aside .story:hover {
   }
   .mobile {
     display: initial;
-    width: 100%;
   }
 }
 
@@ -344,6 +342,22 @@ aside .story:hover {
   #highlights .story {
     max-width: 100%;
     margin: 0.5rem 0;
+    flex-direction: row;
+  }
+  #highlights .image {
+    min-height: 90%;
+  }
+  #highlights .title {
+    max-width: 90%;
+  }
+}
+
+@media only screen and (max-width: 580px) {
+  #highlights .story {
+    flex-direction: column;
+  }
+  p {
+    font-size: 0.9rem;
   }
 }
 
